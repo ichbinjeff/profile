@@ -1,0 +1,14 @@
+{
+	"name": "profile",
+	"version": "1.0.0",
+	"dependencies": {
+		"js": [
+			"libs/jquery/dist/jquery.min.js", 
+			"libs/bootstrap/dist/js/bootstrap.min.js", 
+			"libs/waypoints/lib/jquery.waypoints.min.js"
+		],
+		"css": [
+			"libs/bootstrap/dist/css/bootstrap.min.css"
+		]
+	}
+}
