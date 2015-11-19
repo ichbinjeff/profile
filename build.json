@@ -1,0 +1,20 @@
+{
+	"name": "boilerplate",
+	"version": "1.0.0",
+	"dependencies": {
+		"js": [
+			"libs/jquery/dist/jquery.min.js", 
+			"libs/angular/angular.js",
+			"libs/angular-ui-router/release/angular-ui-router.min.js",
+			"libs/angular-resource/angular-resource.min.js",
+			"libs/angular-bootstrap/ui-bootstrap.min.js",
+			"libs/angular-bootstrap/ui-bootstrap-tpls.min.js"
+		],
+		"test": [
+			"libs/angular-mocks/angular-mocks.js"
+		],
+		"css": [
+			"libs/bootstrap/dist/css/bootstrap.min.css"
+		]
+	}
+}
