@@ -1,0 +1,15 @@
+<nav class="my-nav navbar-fixed-top" ng-class="scroll">
+  <div class="container-fluid">
+      <ul class="navbar-left">
+        <li>
+          <h3>{{caption}}</h3>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li ng-repeat="nav in navs">
+            <a href="{{nav.url}}">{{nav.name}}</a>
+          </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

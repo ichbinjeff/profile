@@ -1,7 +1,141 @@
-.campaign-create-form .input-group {
-    margin: 5px 10px;
+nav.my-nav ul li {
+	list-style-type: none;
+	color: #fff;
 }
 
-.campaign-create-form .row {
-    margin: 15px 0px;
+nav.my-nav ul li a {
+	color: #fff;
+	font-size: 20px;
+}
+
+nav.my-nav.invert-nav {
+	background-color: #fff;
+	animation-name: navbarTransit;
+	animation-duration: 0.3s;
+}
+
+nav.my-nav.invert-nav ul li {
+	color: #337ab7;
+	list-style-type: none;
+}
+
+nav.my-nav.invert-nav ul li a {
+	color: #337ab7;
+}
+
+@keyframes navbarTransit {
+	0%   {top: 10px; opacity: 0;}
+    50%  {top: 5px; opacity: 0.5;}
+    100%  {top: 0px; opacity: 1}
+}
+
+.message-box {
+	width: 90%;
+	margin-top: -550px;
+	background-color: white;
+	padding: 20px 0;
+	position: relative;
+	height: 200px;
+	z-index: 10;
+}
+
+.half {
+	width: 50%;
+	height: 50%;
+}
+
+.large-font {
+	font-size: 20px;
+}
+
+.center {
+	text-align: center;
+}
+
+.margin-top-lg {
+	margin-top: 50px;
+}
+
+.footer {
+    padding: 50px 0;
+    background-color: #2b2d2e;
+    color: #fff;
+}
+
+.sm-img {
+	height: 50px;
+	width: auto;
+}
+
+.md-img2 {
+	height: 250px;
+	width: 250px;
+}
+
+.thumbnail img.sm-img {
+	height: 200px;
+}
+
+.caption h3 a {
+	font-size: 20px;
+}
+
+.footer-nav-bar {
+	font-size: 15px;
+}
+
+.big-font {
+	color: #8aaad9;
+	font-size: 50px;
+	font-weight: 200;
+}
+
+.super-big-font {
+	font-size: 100px;
+	color: #8aaad9;
+	margin-top: 10px;
+	margin-left: -50px;
+}
+
+.slide-display {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+@keyframes example {
+	0%   {top: 0px;}
+    33%  {top: -100%;}
+    66%  {top: -200%;}
+}
+
+.base {
+	position: relative;
+	animation-name: example;
+	animation-duration: 2s;
+}
+
+.slide {
+
+}
+
+.slide1 {
+	position: relative;
+	top: 0px;
+}
+
+.slide0 {
+	position: relative;
+	top: 0px;
+}
+
+.slide2 {
+	position: relative;
+	top: -300px;
+}
+
+.keep-right {
+	text-align: left;
+	padding: 10px;
 }

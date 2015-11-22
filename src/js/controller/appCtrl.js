@@ -1,3 +1,5 @@
-angular.module('app').controller('AppCtrl', ['$q', '$timeout', '$scope', function($q, $timeout, $scope) {
+angular.module('profile').controller('AppCtrl', 
+	['$q', '$timeout', '$scope', '$window',
+	function($q, $timeout, $scope, $window) {
 	
 }]);

@@ -65,12 +65,17 @@ gulp.task('build:code', function() {
 		.pipe(livereload());
 });
 
+gulp.task('build:static', function() {
+	return gulp.src('static/**')
+			.pipe(gulp.dest('dist/static'));
+});
+
 gulp.task('build:template', function() {
 	console.log('building template');
 
 	return gulp.src('src/js/**/*.tpl.html')
 		.pipe(ngHtml2Js({
-			moduleName: 'app'
+			moduleName: 'profile'
 		}))
 		.pipe(concat('partials.js'))
 		.pipe(gulp.dest('dist/partial'))
@@ -128,7 +133,7 @@ gulp.task('build:html', function() {
 			.pipe(livereload());
 });
 
-gulp.task('build', ['build:lib', 'build:libStyle', 'build:code', 'build:template', 'build:style', 'build:html']);
+gulp.task('build', ['build:static', 'build:lib', 'build:libStyle', 'build:code', 'build:template', 'build:style', 'build:html']);
 
 // gulp.task('clean', function() {
 // 	return gulp.src('dist/**')
