@@ -14,15 +14,36 @@
 		<div class="row">
 			<div class="col-md-12">
 				<header>
-					<div nav-bar></div>
-					<div my-carousel></div>
+					<div nav-bar 
+						 caption="nav.caption"
+						 navs="nav.navs">
+					</div>
+					<div my-carousel 
+						greeting-msg="carousel.greeting"
+						greeting-msg2="carousel.greeting2",
+						items="carousel.positions",
+						slides="carousel.bgImg"
+						>
+					</div>
 				</header>
 
-				<div overview></div>
-				<div category-view></div>
+				<div overview 
+					 profile-img="overview.profileImg"
+					 title="overview.title"
+					 heavy-text="overview.heavyText">
+				</div>
+				<div category-view 
+					 title="category.title"
+					 subtitle="category.subtitle"
+					 config="category.config">
+				</div>
 
 				<footer>
-					<div darkbg-footer></div>
+					<div darkbg-footer
+						 github-img="footer.githubImg"
+						 desc-text="footer.descText"
+						 navs="footer.navs">
+					</div>
 				</footer>
 			</div>
 		</div>

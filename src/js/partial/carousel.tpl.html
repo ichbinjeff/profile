@@ -1,21 +1,23 @@
   <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
-  <uib-slide ng-repeat="slide in slides" active="slide.active">
+  <uib-slide 
+  ng-repeat="slide in slides" 
+  active="slide.active">
     <img ng-src="{{slide.image}}">
     <div class="container">
       <div class="message-box">
           <div class="row">
               <div class="col-md-5">
                  <p class="big-font">
-                   {{greeting}}
+                   {{greetingMsg}}
                  </p>
                  <p class="keep-right big-font">
-                      {{greeting2}}
+                      {{greetingMsg2}}
                  </p>
               </div>
-  
+            
               <div class="col-md-7">
                   <p class="super-big-font">
-                    <strong ng-repeat="pos in positions" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">   
+                    <strong ng-repeat="pos in positions" class="message-base message">   
                       {{pos}}
                     </strong>
                   </p>

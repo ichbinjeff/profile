@@ -1,7 +1,7 @@
 <div class="media">
   <div class="media-left">
     <a href="https://github.com/ichbinjeff/">
-      <img class="media-object sm-img" src="{{descPic}}" alt="">
+      <img class="media-object sm-img" src="{{githubImg}}" alt="">
     </a>
   </div>
   <div class="media-body">
@@ -9,7 +9,10 @@
     	{{descText}}
     </h4>
     <p class="footer-nav-bar">
-    	About | work | life | project｜中文
+      <span class="footer-text" ng-repeat="nav in navs">
+          <a href="{{nav.url}}">{{nav.name}}</a>
+          <span ng-if="$index !== navs.length - 1"> | </span>
+      </span>
     </p>
   </div>
 </div>

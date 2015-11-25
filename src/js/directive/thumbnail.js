@@ -1,12 +1,12 @@
 angular.module('profile').directive('thumbnail', function() {
 	return {
 		restrict: 'AE',
-		templateUrl: 'partial/thumbnail.tpl.html',
 		scope: {
-			config: "="
+			thumbnails: "="
 		},
+		templateUrl: 'partial/thumbnail.tpl.html',
 		link: function(scope) {
-			scope.thumbnails = scope.config;
+			
 		}
 	}
 })

@@ -1,1 +1,1 @@
-angular.module('profile', ['ui.router', 'ui.bootstrap', 'ngResource']);
+angular.module('profile', ['ui.router', 'ui.bootstrap', 'ngResource', 'ngAnimate']);
