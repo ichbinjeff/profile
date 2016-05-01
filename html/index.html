@@ -5,41 +5,49 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Shaojie Li | HCI Engineer</title>
+		<title>Shaojie Li | Engineer</title>
 		<link rel="stylesheet" type="text/css" href="lib/libStyle.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 	</head>
 
 	<body ng-app="profile" ng-controller="AppCtrl">	
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12 ">
 				<header>
-					<div nav-bar 
+					<div nav-bar
+						 scroll="goToAnchor(elm)"
+						 change-lang="changeLang()"
 						 caption="nav.caption"
 						 navs="nav.navs">
 					</div>
+					<!-- huge img and message box -->
 					<div my-carousel 
 						greeting-msg="carousel.greeting"
 						greeting-msg2="carousel.greeting2",
 						items="carousel.positions",
-						slides="carousel.bgImg"
-						>
+						slides="carousel.bgImg">
 					</div>
 				</header>
-
-				<div overview 
+				
+				<!-- Content starts here -->
+				<div overview
+					 id="{{overview.id}}" 
 					 profile-img="overview.profileImg"
 					 title="overview.title"
 					 heavy-text="overview.heavyText">
 				</div>
-				<div category-view 
+				
+				<div category-view
+					 id="{{category.id}}" 
 					 title="category.title"
 					 subtitle="category.subtitle"
 					 config="category.config">
 				</div>
+				<!-- Content ends -->
 
 				<footer>
 					<div darkbg-footer
+					     id="{{footer.id}}"
 						 github-img="footer.githubImg"
 						 desc-text="footer.descText"
 						 navs="footer.navs">

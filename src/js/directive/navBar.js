@@ -3,10 +3,16 @@ angular.module('profile').directive('navBar', function($window) {
 		restrict: 'AE',
 		scope: {
 			caption: '=',
-			navs: '='
+			navs: '=',
+			scroll: '&',
+			changeLang: '&'
 		},
 		templateUrl: 'partial/navBar.tpl.html',
 		link: function(scope, ele, att, ctrl) {
+			scope.n = {
+				scroll: scope.scroll
+			};
+
 			$window.onscroll = function(e) {
 				var scrollPos = document.body.scrollTop 
 				|| document.documentElement.scrollTop 

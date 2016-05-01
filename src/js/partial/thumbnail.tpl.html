@@ -1,7 +1,7 @@
 <div class="row">
 	  <div ng-repeat="thumbnail in thumbnails" class=" col-md-3">
 	      <div class="thumbnail">
-		      <a href="#">
+		      <a href="#" ng-click="showContent($index, $event)">
 		      	<img class="sm-img" src="{{thumbnail.image}}" alt="{{thumbnail.alt}}">
 		      </a>
 		      <div class="caption">

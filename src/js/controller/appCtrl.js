@@ -1,6 +1,6 @@
 angular.module('profile').controller('AppCtrl', 
-	['$q', '$timeout', '$scope', '$window', 'MetaResource', 'DefaultConfig',
-	function($q, $timeout, $scope, $window, MetaResource, DefaultConfig) {
+	['$q', '$timeout', '$scope', '$window', 'MetaResource', 'DefaultConfig', '$location', '$anchorScroll','$compile',
+	function($q, $timeout, $scope, $window, MetaResource, DefaultConfig, $location, $anchorScroll, $compile) {
 		MetaResource.get()
 			.$promise.then(function(rst) {
 				fill(rst);
@@ -15,4 +15,19 @@ angular.module('profile').controller('AppCtrl',
 				$scope[k] = metadata[k];
 			}
 		}
+
+		$scope.goToAnchor = function(elm) {
+			debugger;
+			var newhash = elm;
+			if ($location.hash() != newhash) {
+				$location.hash(elm);
+			} else {
+				$anchorScroll();
+			}
+		};
+
+		$scope.changeLang = function() {
+			fill(DefaultConfig.chineseMeta);
+		};
+
 	}]);

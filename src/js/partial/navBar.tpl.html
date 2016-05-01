@@ -7,7 +7,9 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
           <li ng-repeat="nav in navs">
-            <a href="{{nav.url}}">{{nav.name}}</a>
+            <a ng-click="n.scroll({elm: nav.id})" href="">
+              {{nav.name}}
+            </a>
           </li>
       </ul>
     </div><!-- /.navbar-collapse -->

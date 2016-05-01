@@ -9,23 +9,21 @@ angular.module('profile').directive('myCarousel', function($interval) {
 		},
 		templateUrl: 'partial/carousel.tpl.html',
 		link: function(scope, ele, attr) {
-			var index = 1;
-			if (!scope.items) {
-				scope.positions = [];
-			} else {
-				scope.positions = [scope.items[0].toUpperCase()];
-			}
+			scope.$watch('items', function(newVal, oldVal) {
+				if (newVal && newVal.length > 0) {
+					changePos(newVal);
+				}
+			});
 			
-			$interval(function() {
-				if (scope.positions.length > 0) {
-					scope.positions.pop();
-				}
-				scope.positions.push(scope.items[index].toUpperCase());
-				index ++;
-				if (index === scope.items.length) {
-					index = 0;
-				}
-			}, 1000);
+			function changePos(data) {
+				var interval = 1000;
+				scope.position = data[data.length - 1];
+				$interval(function() {
+					var first = data.shift();
+					scope.position = first;
+					data.push(first);
+				}, interval);
+			}
 
 		}
 	}

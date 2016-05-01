@@ -3,6 +3,10 @@ nav.my-nav ul li {
 	color: #fff;
 }
 
+nav.my-nav {
+	transition: background 0.1s linear;
+}
+
 nav.my-nav ul li a {
 	color: #fff;
 	font-size: 20px;
@@ -11,34 +15,10 @@ nav.my-nav ul li a {
 nav.my-nav.invert-nav {
 	background-color: #fff;
 	opacity: 1;
-	transition: .3s linear all;
-	/*animation-name: navbarTransit;
-	animation-duration: 0.3s;*/
-}
-
-.footer-text a {
-	font-size: 16px;
-	color: #fff;
-}
-
-.invert-nav.ng-enter.ng-enter-active {
-  opacity: 1;
-  top: 0;
-}
-
-.invert-nav.ng-enter {
-  opacity: 0;
-  top: -20px;
-}
-
-.invert-nav.ng-leave {
-  opacity: 1;
-  top: 0;
-}
-
-.invert-nav.ng-leave-active {
-  opacity: 0;
-  top: 50px;
+	transition: .2s ease-out all;
+	border-bottom: 1px solid #ddd;
+	color: #337ab7;
+	pading-top: 0em;
 }
 
 nav.my-nav.invert-nav ul li {
@@ -50,21 +30,21 @@ nav.my-nav.invert-nav ul li a {
 	color: #337ab7;
 }
 
+.footer-text a {
+	font-size: 16px;
+	color: #fff;
+}
+
 .message-base {
-	position: relative;
-	overflow: hidden;
-	height: 100%;
-	width: 100%;
+	display: inline-block;
+	padding-top: 5vh;
+
 }
 
 .message-box {
-	width: 90%;
-	margin-top: -550px;
 	background-color: white;
-	padding: 20px 0;
-	position: relative;
-	margin-bottom: -600px;
-	height: 200px;
+	position: absolute;
+	top: 15vh;
 	z-index: 10;
 }
 
@@ -101,6 +81,13 @@ nav.my-nav.invert-nav ul li a {
 	width: 250px;
 }
 
+.md-img {
+	margin-top: 50px;
+	margin-right: 30px;
+	height: 20vw;
+	width: 20vw;
+}
+
 .thumbnail img.sm-img {
 	height: 200px;
 }
@@ -113,17 +100,60 @@ nav.my-nav.invert-nav ul li a {
 	font-size: 15px;
 }
 
+.small-padding {
+	padding-top: 20px;
+}
+
+.leftAlignment {
+	text-align: right;
+}
+
 .big-font {
 	color: #8aaad9;
-	font-size: 350%;
+	font-size: 3.4vmax;
 	font-weight: 200;
 }
 
+.msg-box {
+	vertical-align: top;
+	display: inline-block;
+	width: 30vw;
+	height: 15vh;
+	padding: 2.2vh 0 10vh 0.8vw;
+}
+
+.flag {
+	height: 22vh;
+	width: 60vw; 
+	position: absolute; 
+	top: 30vh; 
+	left: 20vw; 
+	background-color: white;
+	overflow: hidden;
+}
+
+@media (max-width: 600px) {
+	.flag {
+		display: none;
+	}
+
+	nav.navbar-nav.navbar-right {
+		display: none;
+	}
+
+	nav.my-nav.invert-nav {
+		display: none;
+	}
+}
+
 .super-big-font {
-	font-size: 700%;
+	font-size: 5.7vmax;
 	color: #8aaad9;
-	margin-top: 10px;
-	margin-left: -50px;
+	padding-top: 5.2vh;
+}
+
+.overflow-hidden {
+	overflow: hidden;
 }
 
 .slide-display {
@@ -165,6 +195,20 @@ nav.my-nav.invert-nav ul li a {
 }
 
 .keep-right {
-	text-align: left;
-	padding: 10px;
+	text-align: right;
+	padding-right: 20px;
+}
+
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.category-title {
+	margin-top: 50px;
+}
+
+.placeholder {
+	background: url("static/header3.jpg") no-repeat center center fixed; 
+	background-size: cover;
 }
