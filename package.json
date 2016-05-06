@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "bower": "^1.7.9",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2"
   }
 }
