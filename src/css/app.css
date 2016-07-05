@@ -35,19 +35,6 @@ nav.my-nav.invert-nav ul li a {
 	color: #fff;
 }
 
-.message-base {
-	display: inline-block;
-	padding-top: 5vh;
-
-}
-
-.message-box {
-	background-color: white;
-	position: absolute;
-	top: 15vh;
-	z-index: 10;
-}
-
 .half {
 	width: 50%;
 	height: 50%;
@@ -89,7 +76,7 @@ nav.my-nav.invert-nav ul li a {
 }
 
 .thumbnail img.sm-img {
-	height: 200px;
+	max-height: 200px;
 }
 
 .caption h3 a {
@@ -108,48 +95,36 @@ nav.my-nav.invert-nav ul li a {
 	text-align: right;
 }
 
+.flag {
+	background-color: white;
+	height: 10vw;
+	margin-top: 300px;
+	background-color: white;
+	padding-top: 1.3vw;
+	padding-left: 0.5vw;
+	padding-bottom: 1.3vw;
+}
+
+
 .big-font {
 	color: #8aaad9;
-	font-size: 3.4vmax;
+	font-size: 2.5vw;
 	font-weight: 200;
 }
 
-.msg-box {
-	vertical-align: top;
-	display: inline-block;
-	width: 30vw;
-	height: 15vh;
-	padding: 2.2vh 0 10vh 0.8vw;
-}
-
-.flag {
-	height: 22vh;
-	width: 60vw; 
-	position: absolute; 
-	top: 30vh; 
-	left: 20vw; 
-	background-color: white;
-	overflow: hidden;
-}
-
-@media (max-width: 600px) {
-	.flag {
-		display: none;
-	}
-
-	nav.navbar-nav.navbar-right {
-		display: none;
-	}
-
-	nav.my-nav.invert-nav {
-		display: none;
-	}
-}
-
 .super-big-font {
-	font-size: 5.7vmax;
+	font-size: 4.5vw;
+	font-weight: bold;
 	color: #8aaad9;
-	padding-top: 5.2vh;
+}
+
+.message {
+	display: inline-block;
+}
+
+.msg-box {
+	display: inline-block;
+	width: 40%;
 }
 
 .overflow-hidden {
@@ -207,8 +182,35 @@ nav.my-nav.invert-nav ul li a {
 .category-title {
 	margin-top: 50px;
 }
-
-.placeholder {
-	background: url("static/header3.jpg") no-repeat center center fixed; 
+.wall-paper {
+	background-image: url('../static/header3.jpg'); 
+	background-repeat: no-repeat; 
 	background-size: cover;
+	background-position: 0px 0px; 
+	height: 1000px
+}
+
+.container .media-left img {
+	max-width: 250px;
+	max-height: 250px;
+}
+
+.card-container {
+  max-height: 265px;
+  border: 1px solid #DDD;
+  padding: 10px 18px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.card-container:hover {
+  border-color: #aaa;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+a.cross {
+  padding: 10px;
+  position: fixed;
+  right: 10px;
+  text-decoration: none;
 }

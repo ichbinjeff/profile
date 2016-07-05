@@ -2,13 +2,18 @@
   <div class="container-fluid">
       <ul class="navbar-left">
         <li>
-          <h3>{{caption}}</h3>
+          <h3>{{nav.caption}}</h3>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-          <li ng-repeat="nav in navs">
-            <a ng-click="n.scroll({elm: nav.id})" href="">
-              {{nav.name}}
+          <li ng-repeat="item in nav.navs">
+            <a ng-click="n.scroll({elm: item.id})" ng-href="{{item.url}}">
+              {{item.name}}
+            </a>
+          </li>
+          <li>
+             <a ng-click="changeLang(nav.lang)" href="">
+              {{nav.lang.name}}
             </a>
           </li>
       </ul>

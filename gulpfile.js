@@ -4,7 +4,7 @@ var babel = require('gulp-babel');
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+var uglify = require("gulp-uglify");
 var rename = require('gulp-rename');
 var dest = require('gulp-dest');
 var clean = require('gulp-clean');
@@ -20,7 +20,7 @@ var Server = require('karma').Server;
 livereload({ start: true });
 
 gulp.task('lint', function() { 
-	return gulp.src(['src/js/*.js', 'src/js/**/*.js'])
+	return gulp.src(['src/js/*'])
 		.pipe(jshint())
 		.pipe(jshint.reporter('default'));
 });
@@ -54,15 +54,14 @@ gulp.task('clean', function() {
 
 gulp.task('build:code', function() {
 	console.log('building code');
-
 	return gulp.src(['src/js/*.js', 'src/js/**/*.js'])
-		.pipe(babel())
+		.pipe(babel({presets: ['es2015']}))
 		.pipe(concat('app.js'))
 		.pipe(gulp.dest('dist/app'))
 		.pipe(rename('app.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('dist/app'))
-		.pipe(livereload());
+	    .pipe(gulp.dest('dist/app'))
+	    .pipe(livereload());
 });
 
 gulp.task('build:static', function() {

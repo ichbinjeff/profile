@@ -1,11 +1,24 @@
 <div id="work" class="container">
-	<div class="center category-title">
-		<h1>{{title}}</h1>
-		<h4>{{subtitle}}
+	<div ng-if="ct.category.elaborate" class="center category-title">
+		<h1>{{ct.category.sub}}</h1>
+		<button class="large-font btn btn-link"
+				ng-click="ct.backToCategory()">
+			back to category
+		</button>
+	</div>
+
+	<div ng-if="!ct.category.elaborate" 
+		 class="center category-title">
+		<h1>{{ct.title}}</h1>
+		<h4>{{ct.subtitle}}
 		</h4>
 	</div>
 	
-	<div thumbnail thumbnails="config">
+	<div class="row">
+		<card thumbnail="item" 
+			  category="ct.category"
+			  ng-repeat="item in ct.category.config"
+			  ng-click="ct.click($index)">
+		</card>
 	</div>
-</div>
 </div>

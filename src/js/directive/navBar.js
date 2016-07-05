@@ -2,8 +2,7 @@ angular.module('profile').directive('navBar', function($window) {
 	return {
 		restrict: 'AE',
 		scope: {
-			caption: '=',
-			navs: '=',
+			nav: '=',
 			scroll: '&',
 			changeLang: '&'
 		},
